@@ -158,7 +158,7 @@ SPOTIFY_ALBUM_IMG_URL = getenv(
 
 SPOTIFY_PLAYLIST_IMG_URL = getenv(
     "SPOTIFY_PLAYLIST_IMG_URL", "https://envs.sh/5hH.jpg"
-))
+)
 
 
 def time_to_seconds(time):
