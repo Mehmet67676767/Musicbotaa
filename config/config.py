@@ -47,7 +47,7 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 GIT_TOKEN = getenv("GIT_TOKEN",  None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Alexa_BotUpdates")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/the_kumsal_team")
 
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Alexa_Help")
 
