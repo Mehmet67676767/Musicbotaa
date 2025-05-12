@@ -42,10 +42,16 @@ from pyrogram.types import InlineKeyboardButton
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
     import random
-    bars = ["▁▂▃▄▅▆▇█", "█▇▆▅▄▃▂▁", "▉▊▋▌▍▎▏▏"]  # Farklı animasyon barları
+    bars = ["▁▂▃▄▅▆▇█", "█▇▆▅▄▃▂▁", "▉▊▋▌▍▎▏▏"]
     bar = random.choice(bars)
 
     buttons = [
+        [  # En üstte link
+            InlineKeyboardButton(
+                text="🥀 Kumsal Bots 🥀",
+                url="https://t.me/the_team_kumsal"
+            )
+        ],
         [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
@@ -64,7 +70,6 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
     ]
     return buttons
-
 
 def telegram_markup_timer(_, videoid, chat_id, played, dur):
     bar = random.choice(selections)
