@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
+# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
 # Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
 
-"""
+""""
 TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -32,7 +32,7 @@ def start_pannel(_):
         buttons.append(
             [
                 InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
-                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/the_team_kumsal"),
             ]
         )
     else:
@@ -42,7 +42,7 @@ def start_pannel(_):
             )
         if SUPPORT_GROUP:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}")]
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/the_team_kumsal")]
             )
     return buttons
 
@@ -55,7 +55,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         buttons.append(
             [
                 InlineKeyboardButton(text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"),
-                InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/the_team_kumsal"),
             ]
         )
     else:
@@ -65,7 +65,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             )
         if SUPPORT_GROUP:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}")]
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/the_team_kumsal")]
             )
     buttons.append(
         [
@@ -79,14 +79,14 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         buttons.append(
             [
                 InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER_ID),
-                InlineKeyboardButton(text=_["S_B_6"], url=f"{GITHUB_REPO}"),
+                InlineKeyboardButton(text=_["S_B_6"], url=f"https://t.me/the_zerrin_albora"),
             ]
         )
     else:
         if GITHUB_REPO:
             buttons.append(
                 [
-                    InlineKeyboardButton(text=_["S_B_6"], url=f"{GITHUB_REPO}"),
+                    InlineKeyboardButton(text=_["S_B_6"], url=f"https://t.me/the_zerrin_albora"),
                 ]
             )
         if OWNER:
