@@ -107,67 +107,58 @@ clean = {}
 
 autoclean = []
 
-START_VIDEO_URL = "https://streamable.com/8h2y4v"  # Videonu yükleyip bu URL'yi gir
+START_IMG_URL = getenv(
+    "START_IMG_URL", "https://ibb.co/YFD02YDY"
+)
 
 PING_IMG_URL = getenv(
-    "PING_IMG_URL",
-    "assets/Ping.jpeg",
+    "PING_IMG_URL", "https://ibb.co/YFD02YDY"
 )
 
 PLAYLIST_IMG_URL = getenv(
-    "PLAYLIST_IMG_URL",
-    "assets/Playlist.jpeg",
+    "PLAYLIST_IMG_URL", None
 )
 
 GLOBAL_IMG_URL = getenv(
-    "GLOBAL_IMG_URL",
-    "assets/Global.jpeg",
-)
-
-STATS_IMG_URL = getenv(
-    "STATS_IMG_URL",
-    "assets/Stats.jpeg",
-)
-
-TELEGRAM_AUDIO_URL = getenv(
-    "TELEGRAM_AUDIO_URL",
-    "assets/Audio.jpeg",
-)
-
-TELEGRAM_VIDEO_URL = getenv(
-    "TELEGRAM_VIDEO_URL",
-    "assets/Video.jpeg",
-)
-
-STREAM_IMG_URL = getenv(
-    "STREAM_IMG_URL",
-    "assets/Stream.jpeg",
-)
-
-SOUNCLOUD_IMG_URL = getenv(
-    "SOUNCLOUD_IMG_URL",
-    "assets/Soundcloud.jpeg",
+    "GLOBAL_IMG_URL", "https://envs.sh/5hH.jpg"
 )
 
 YOUTUBE_IMG_URL = getenv(
-    "YOUTUBE_IMG_URL",
-    "assets/Youtube.jpeg",
+    "YOUTUBE_IMG_URL", None
 )
 
+STATS_IMG_URL = getenv(
+    "STATS_IMG_URL", "https://envs.sh/5hH.jpg"
+)
+
+TELEGRAM_AUDIO_URL = getenv(
+    "TELEGRAM_AUDIO_URL", "https://envs.sh/5hH.jpg"
+)
+
+TELEGRAM_VIDEO_URL = getenv(
+    "TELEGRAM_VIDEO_URL", "https://envs.sh/5hH.jpg"
+)
+
+STREAM_IMG_URL = getenv(
+    "STREAM_IMG_URL", "https://envs.sh/5hH.jpg"
+)
+
+SOUNCLOUD_IMG_URL = getenv(
+    "SOUNCLOUD_IMG_URL", "https://envs.sh/5hH.jpg"
+)
+
+
 SPOTIFY_ARTIST_IMG_URL = getenv(
-    "SPOTIFY_ARTIST_IMG_URL",
-    "assets/SpotifyArtist.jpeg",
+    "SPOTIFY_ARTIST_IMG_URL", "https://envs.sh/5hH.jpg"
 )
 
 SPOTIFY_ALBUM_IMG_URL = getenv(
-    "SPOTIFY_ALBUM_IMG_URL",
-    "assets/SpotifyAlbum.jpeg",
+    "SPOTIFY_ALBUM_IMG_URL", "https://envs.sh/5hH.jpg"
 )
 
 SPOTIFY_PLAYLIST_IMG_URL = getenv(
-    "SPOTIFY_PLAYLIST_IMG_URL",
-    "assets/SpotifyPlaylist.jpeg",
-)
+    "SPOTIFY_PLAYLIST_IMG_URL", "https://envs.sh/5hH.jpg"
+))
 
 
 def time_to_seconds(time):
