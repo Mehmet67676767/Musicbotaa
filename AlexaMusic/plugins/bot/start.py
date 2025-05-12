@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
+# Copyright (C) 2024 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
 # Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
 
-"""
+""""
 TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+Copyright (c) 2024 -present Team=Alexa <https://github.com/TheTeamAlexa>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -51,14 +51,14 @@ async def start_comm(client, message: Message, _):
     await add_served_user(message.from_user.id)
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
-        if name[:4] == "help":
+        if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_text(_["help_1"], reply_markup=keyboard)
-        if name[:4] == "song":
+        if name[0:4] == "song":
             return await message.reply_text(_["song_2"])
-        if name[:3] == "sta":
+        if name[0:3] == "sta":
             m = await message.reply_text(
-                "🥱 ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴩᴇʀsᴏɴᴀʟ sᴛᴀᴛs ғʀᴏᴍ {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
+                "🥱 Kişisel istatistikleriniz alınıyor {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -94,7 +94,7 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/Shayri_Music_Lovers) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
+                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/sohbet_siir) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                     else:
                         msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
@@ -109,24 +109,24 @@ async def start_comm(client, message: Message, _):
             await m.delete()
             await message.reply_photo(photo=thumbnail, caption=msg)
             return
-        if name[:3] == "sud":
+        if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)
             if await is_on_off(config.LOG):
                 sender_id = message.from_user.id
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>sᴜᴅᴏʟɪsᴛ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} Botu kontrol etmek için yeni başlattım <code>sᴜᴅᴏʟɪsᴛ</code>\n\n**Kullanıcı Kimliği:** {sender_id}\n**Kullanıcı Adı:** {sender_name}",
                 )
             return
-        if name[:3] == "lyr":
+        if name[0:3] == "lyr":
             query = (str(name)).replace("lyrics_", "", 1)
             lyrical = config.lyrical
             lyrics = lyrical.get(query)
             if lyrics:
                 return await Telegram.send_split_text(message, lyrics)
             else:
-                return await message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ʟʏʀɪᴄs.")
+                return await message.reply_text("Şarkı sözleri alınamadı.")
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name[0:3] == "inf":
@@ -144,22 +144,22 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-😲**şarkı bilgisi**😲
+😲**Parça Bilgisi**😲
 
-📌**ᴛɪᴛʟᴇ:** {title}
+📌**Başlık:** {title}
 
-⏳**dakika:** {duration} ᴍɪɴᴜᴛᴇs
-👀**görüntüleme:** `{views}`
-⏰**diller:** {published}
-🎥**kanal:** {channel}
-📎**kanal linki:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-🔗**ʟɪɴᴋ:** [yotube a git]({link})
+⏳**Süre:** {duration} ᴍɪɴᴜᴛᴇs
+👀**Görüntülenme Sayısı:** `{views}`
+⏰**Yayınlanma Tarihi:** {published}
+🎥**Kanal:** {channel}
+📎**Kanal Bağlantısı:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
+🔗**Bağlantı:** [gir beybi]({link})
 
 💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"),
+                        InlineKeyboardButton(text="• link •", url=f"{link}"),
                         InlineKeyboardButton(text="• ᴄʟᴏsᴇ •", callback_data="close"),
                     ],
                 ]
@@ -177,30 +177,30 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} Botu kontrol etmek için yeni başlattım <code>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</code>\n\n**Kullanıcı Kimliği:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
                 )
     else:
         try:
             await app.resolve_peer(OWNER_ID[0])
             OWNER = OWNER_ID[0]
-        except Exception:
+        except:
             OWNER = None
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
-                    caption=_["start_2"].format(message.from_user.mention, app.mention),
+                    caption=_["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
-            except Exception:
+            except:
                 await message.reply_text(
-                    caption=_["start_2"].format(message.from_user.mention, app.mention),
+                    _["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
             await message.reply_text(
-                caption=_["start_2"].format(message.from_user.mention, app.mention),
+                _["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
             )
         if await is_on_off(config.LOG):
@@ -208,7 +208,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                f"{message.from_user.mention} Botunuz yeni başlatıldı.\n\n**Kullanıcı Kimliği:** {sender_id}\n**Kullanıcı Adı:** {sender_name}",
             )
 
 
@@ -233,7 +233,7 @@ async def welcome(client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "**ᴩʀɪᴠᴀᴛᴇ ᴍᴜsɪᴄ ʙᴏᴛ**\n\nᴏɴʟʏ ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛs ᴀᴜᴛʜᴏʀɪsᴇᴅ ʙʏ ᴍʏ ᴏᴡɴᴇʀ, ʀᴇǫᴜᴇsᴛ ɪɴ ᴍʏ ᴏᴡɴᴇʀ's ᴩᴍ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴅᴏ sᴏ ᴛʜᴇɴ ғᴜ*ᴋ ᴏғғ ʙᴇᴄᴀᴜsᴇ ɪ'ᴍ ʟᴇᴀᴠɪɴɢ."
+                "**Özel Müzik Botu**\n\nYalnızca benim sahibi olduğum sohbetler için yetkilisiniz. Yetkilendirilmek için lütfen sahibimin özel mesajına (PM) talepte bulunun. Eğer bunu yapmak istemiyorsanız, sorun değil; ben gidiyorum."
             )
             return await app.leave_chat(message.chat.id)
     else:
