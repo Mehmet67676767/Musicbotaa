@@ -144,16 +144,16 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-😲**ᴛʀᴀᴄᴋ ɪɴғᴏʀɴᴀᴛɪᴏɴ**😲
+😲**şarkı bilgisi**😲
 
 📌**ᴛɪᴛʟᴇ:** {title}
 
-⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} ᴍɪɴᴜᴛᴇs
-👀**ᴠɪᴇᴡs:** `{views}`
-⏰**ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ:** {published}
-🎥**ᴄʜᴀɴɴᴇʟ:** {channel}
-📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-🔗**ʟɪɴᴋ:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
+⏳**dakika:** {duration} ᴍɪɴᴜᴛᴇs
+👀**görüntüleme:** `{views}`
+⏰**diller:** {published}
+🎥**kanal:** {channel}
+📎**kanal linki:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
+🔗**ʟɪɴᴋ:** [yotube a git]({link})
 
 💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
