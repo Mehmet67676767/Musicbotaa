@@ -1,22 +1,17 @@
 
+
 # Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
 # Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
-
-"""
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
-
-This program is free software: you can redistribute it and can modify
-as you want or you can collabe if you have new ideas.
-"""
-
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import SUPPORT_GROUP, SUPPORT_CHANNEL
 import random
 
-## After Edits with Timer Bar
-
+# Daha havalı animasyonlar için barlar
+bars = [
+    "█▒▒▒▒▒▒▒", "██▒▒▒▒▒▒", "███▒▒▒▒▒", "████▒▒▒▒", "█████▒▒▒",
+    "██████▒▒", "███████▒", "████████", "▁▂▃▄▅▆▇█", "▉▊▋▌▍▎▏▏"
+]
 
 selections = [
     "▁▄▂▇▄▅▄▅▃",
@@ -29,26 +24,14 @@ selections = [
     "▁▃▅▇▂▅▄▃▇",
     "▃▅▂▅▇▁▄▃▁",
     "▇▅▂▅▃▄▃▁▃",
-    "▃▇▂▅▁▅▄▃▁",
-    "▅▄▇▂▅▂▄▇▁",
-    "▃▅▂▅▃▇▄▅▃",
 ]
 
-
-## After Edits with Timer Bar
-
-
-from pyrogram.types import InlineKeyboardButton
-
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    import random
-    bars = ["▁▂▃▄▅▆▇█", "█▇▆▅▄▃▂▁", "▉▊▋▌▍▎▏▏"]
     bar = random.choice(bars)
-
     buttons = [
-        [  # En üstte link
+        [
             InlineKeyboardButton(
-                text="🥀 Kumsal Bots 🥀",
+                text="🔥 Kumsal Music Zone 🔥",
                 url="https://t.me/the_team_kumsal"
             )
         ],
@@ -59,17 +42,46 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             )
         ],
         [
-            InlineKeyboardButton("▶️", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton("⏸️", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton("⏭️", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton("⏹️", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton("⚡ Devam Et", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton("⏸ Chill Mode", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton("⏭ Bir Sonraki Hit", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton("⛔ Bitir Partiyi", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton("✅ ʟɪsᴛᴇᴍᴇ ᴇᴋʟᴇ ", callback_data=f"add_playlist {videoid}"),
-            InlineKeyboardButton("⚙️ ᴄ-ᴘᴀɴᴇʟ", callback_data=f"PanelMarkup {videoid}|{chat_id}"),
+            InlineKeyboardButton("✨ Listeme Ekle", callback_data=f"add_playlist {videoid}"),
+            InlineKeyboardButton("⚙️ Ayarlar", callback_data=f"PanelMarkup {videoid}|{chat_id}"),
         ],
     ]
     return buttons
+
+def telegram_markup_timer(_, videoid, chat_id, played, dur):
+    bar = random.choice(selections)
+    buttons = [
+        [
+            InlineKeyboardButton(text="❌ Menüyü Kapat", callback_data="close"),
+            InlineKeyboardButton(
+                text=f"{played} •{bar}• {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✨ Listeme Ekle",
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(text="👑 Sahip", url="https://t.me/Jankari_Ki_Duniya"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⚙️ Ayarlar",
+                callback_data=f"PanelMarkup None|{chat_id}",
+            ),
+            InlineKeyboardButton(text="💬 Destek", url=SUPPORT_GROUP),
+        ],
+    ]
+    return buttons
+
+
 
 def telegram_markup_timer(_, videoid, chat_id, played, dur):
     bar = random.choice(selections)
