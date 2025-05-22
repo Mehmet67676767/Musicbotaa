@@ -5,9 +5,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import SUPPORT_GROUP, SUPPORT_CHANNEL
 import random
 
-# Ultra havalı bar stilleri
+# Duygusal ve estetik zaman çubuğu stilleri
 bars = [
-    "⣿⣷⣯⣟⡿⢿⠿⠻⠋", "⠋⠻⠿⠿⠿⢿⡿⣟⣯⣷⣿", "▓▒░░▒▓█", "▁▃▅▇▆▇▅▃▁", "█▓▒░▒▓█", "◉—◉—◉"
+    "⸙━━❀━━⸙", "✦･ﾟ:*✧･ﾟ:*", "☁️⋆｡°✩₊", "⇝❥⇜⇝❥⇜", "✶⋆｡˚☽˚｡⋆", "⭒𖤐˚⋆", "⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆"
 ]
 
 selections = [
