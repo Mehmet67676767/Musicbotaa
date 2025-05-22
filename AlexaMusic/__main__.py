@@ -1,18 +1,32 @@
 
+# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+
+"""
+TheTeamAlexa is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+
+This program is free software: you can redistribute it and can modify
+as you want or you can collabe if you have new ideas.
+"""
+
+
 import asyncio
 import importlib
+from typing import Any
+
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from AlexaMusic import app, userbot
-from AlexaMusic.logger import LOGGER
+from AlexaMusic import LOGGER, app, userbot
 from AlexaMusic.core.call import Alexa
 from AlexaMusic.misc import sudo
 from AlexaMusic.plugins import ALL_MODULES
 from AlexaMusic.utils.database import get_banned_users, get_gbanned
 from AlexaMusic.core.cookies import save_cookies
+
 
 async def init():
     if all(not getattr(config, f"STRING{i}") for i in range(1, 6)):
