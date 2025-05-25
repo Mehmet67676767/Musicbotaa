@@ -18,53 +18,23 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     bar = random.choice(bars)
     buttons = [
         [
-            InlineKeyboardButton(
-                text="🚀 Kumsal Bots 🚀",
-                url="https://t.me/the_team_kumsal"
-            )
+            InlineKeyboardButton("⚡ BAŞLAT", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton("⛔ DURDUR", callback_data=f"ADMIN Stop|{chat_id}")
         ],
         [
-            InlineKeyboardButton(
-                text=f"{played} ⏳ {bar} ⏳ {dur}",
-                callback_data="GetTimer"
-            )
+            InlineKeyboardButton("⏸ BEKLET", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton("⭐ GEÇ", callback_data=f"ADMIN Skip|{chat_id}")
         ],
         [
-            InlineKeyboardButton("▶️", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton("⏸", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton("⏭", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton("⏹", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton("✴️ LİSTEYE EKLE", callback_data=f"add_playlist {videoid}"),
+            InlineKeyboardButton("⚙ PANEL", callback_data=f"PanelMarkup {videoid}|{chat_id}")
         ],
         [
-            InlineKeyboardButton("✅ Listeye Ekle", callback_data=f"add_playlist {videoid}"),
-            InlineKeyboardButton("🔮 Kontrol Paneli", callback_data=f"PanelMarkup {videoid}|{chat_id}"),
-        ],
-    ]
-    return buttons
-
-def telegram_markup_timer(_, videoid, chat_id, played, dur):
-    bar = random.choice(selections)
-    buttons = [
-        [
-            InlineKeyboardButton(text="❌ Kapat", callback_data="close"),
-            InlineKeyboardButton(
-                text=f"{played} ✧{bar}✧ {dur}",
-                callback_data="GetTimer",
-            )
+            InlineKeyboardButton("🔁 KARIŞTIR", callback_data="Shuffle"),
+            InlineKeyboardButton("👑 YÖNETİCİ", callback_data="owner_info")
         ],
         [
-            InlineKeyboardButton(
-                text="➕ Listeye Ekle",
-                callback_data=f"add_playlist {videoid}",
-            ),
-            InlineKeyboardButton(text="👑 Sahip", url="@the_alya_albora"),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⚙ Ayarlar",
-                callback_data=f"PanelMarkup None|{chat_id}",
-            ),
-            InlineKeyboardButton(text="💬 Yardım Grubu", url=SUPPORT_GROUP),
+            InlineKeyboardButton("❌ KAPAT", callback_data="close")
         ],
     ]
     return buttons
