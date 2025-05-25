@@ -1,6 +1,6 @@
 import random
 
-ramo = {
+selam = {
     "slm": (
         "**Sen nerdesin ya** 😂",
         "**Selmmm**",
