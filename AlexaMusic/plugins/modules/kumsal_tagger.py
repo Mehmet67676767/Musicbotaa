@@ -420,7 +420,7 @@ async def chatModeHandler(bot: app, msg: Message):
         reply = random.choice(naber)
         await asyncio.sleep(0.06)  
          
-    elif kontrol(["allah"], text): # * Selam yazısı metnin içinde varsa cevap veriyoruz
+    elif kontrol(["pelin"], text): # * Selam yazısı metnin içinde varsa cevap veriyoruz
         reply = random.choice(pelin)
         await asyncio.sleep(0.06)        
                  
@@ -648,7 +648,7 @@ async def chatModeHandler(bot: app, msg: Message):
         reply = random.choice(hayatım)
         await asyncio.sleep(0.06)          
          
-    elif kontrol(["albora"], text): # * Selam yazısı metnin içinde varsa cevap veriyoruz
+    elif kontrol(["cus"], text): # * Selam yazısı metnin içinde varsa cevap veriyoruz
         reply = random.choice(cus)
         await asyncio.sleep(0.06)  
         
@@ -763,64 +763,95 @@ async def chatModeHandler(bot: app, msg: Message):
 
     msg.continue_propagation()  #! BURAYA DOKUNMA
 
-
-# Komut listesi
-commandList = ["zar", "dart", "basket", "futbol", "bowling", "slot", "para", "mani", "saka", "d", "c"]
-
-# Örnek içerikler
-mani = ["Çık karşıma delikanlıysan", "Gönül bu, ferman dinlemez"]
-espri = ["Adamın biri zayıflamış, çünkü light espriymiş."]
-D_LIST = ["En utandığın anı anlat.", "Sınıfta hiç kopya çektin mi?"]
-C_LIST = ["Sokakta şarkı söyle ve videoya çek.", "Bir arkadaşına seni seviyorum de."]
-
 @app.on_message(filters.command(commandList))
-async def games(c: Client, m: Message):
+async def games(c: app, m: Message):
+        
+    "🎲", "🎯", "🏀", "⚽", "🎳", "🎰"
+
     command = m.command[0]
 
     if command == "zar":
         return await c.send_dice(m.chat.id, emoji="🎲",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Tekrar Oyna ♻️", callback_data="zar")]
-            ])
-        )
+                                 reply_markup=InlineKeyboardMarkup(
+                                        [
+                                            [
+                                                InlineKeyboardButton(
+                                                    "Tekrar Oyna ♻️", callback_data="zar"
+                                                ),
+                                            ]
+                                        ]
+                                    )
+                                )
 
     elif command == "dart":
         return await c.send_dice(m.chat.id, emoji="🎯",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Tekrar Oyna ♻️", callback_data="dart")]
-            ])
-        )
+                                    reply_markup=InlineKeyboardMarkup(
+                                            [
+                                                [
+                                                    InlineKeyboardButton(
+                                                        "Tekrar Oyna ♻️", callback_data="dart"
+                                                    ),
+                                                ]
+                                            ]
+                                        )
+                                    )
 
     elif command == "basket":
         return await c.send_dice(m.chat.id, emoji="🏀",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Tekrar Oyna ♻️", callback_data="basket")]
-            ])
-        )
+                                    reply_markup=InlineKeyboardMarkup(
+                                            [
+                                                [
+                                                    InlineKeyboardButton(
+                                                        "Tekrar Oyna ♻️", callback_data="basket"
+                                                    ),
+                                                ]
+                                            ]
+                                        )
+                                    )
 
     elif command == "futbol":
         return await c.send_dice(m.chat.id, emoji="⚽",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Tekrar Oyna ♻️", callback_data="futbol")]
-            ])
-        )
+                                    reply_markup=InlineKeyboardMarkup(
+                                            [
+                                                [
+                                                    InlineKeyboardButton(
+                                                        "Tekrar Oyna ♻️", callback_data="futbol"
+                                                    ),
+                                                ]
+                                            ]
+                                        )
+                                    )
 
     elif command == "bowling":
         return await c.send_dice(m.chat.id, emoji="🎳",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Tekrar Oyna ♻️", callback_data="bowling")]
-            ])
-        )
+                                    reply_markup=InlineKeyboardMarkup(
+                                            [
+                                                [
+                                                    InlineKeyboardButton(
+                                                        "Tekrar Oyna ♻️", callback_data="bowling"
+                                                    ),
+                                                ]
+                                            ]
+                                        )
+                                    )
 
     elif command == "slot":
         return await c.send_dice(m.chat.id, emoji="🎰",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Tekrar Oyna ♻️", callback_data="slot")]
-            ])
-        )
+                                    reply_markup=InlineKeyboardMarkup(
+                                            [
+                                                [
+                                                    InlineKeyboardButton(
+                                                        "Tekrar Oyna ♻️", callback_data="slot"
+                                                    ),
+                                                ]
+                                            ]
+                                        )
+                                    )
 
     elif command == "para":
-        return await m.reply("**Yazı 🪙**" if random.randint(0, 1) == 0 else "**Tura 🪙**")
+        return await m.reply(
+            "**Yazı 🪙**" if random.randint(0, 1) == 0 else "**Tura 🪙**"
+        )
 
     elif command == "mani":
         return await m.reply_text(random.choice(mani))
@@ -830,32 +861,12 @@ async def games(c: Client, m: Message):
 
     elif command == "d":
         return await m.reply_text(
-            f"**✅ Doğruluk mu ? 🔪 Cesaret mi ?\n\n{m.from_user.mention} Doğruluk sorusu seçti !\n\n{random.choice(D_LIST)}**"
+            f"**✅ Doğruluk mu ? 🔪 Cesaret mi ? \n\n{m.from_user.mention} Doğruluk sorusu seçti !\n\n{random.choice(D_LİST)}**"
         )
 
     elif command == "c":
         return await m.reply_text(
-            f"**✅ Doğruluk mu ? 🔪 Cesaret mi ?\n\n{m.from_user.mention} Cesaret sorusu seçti !\n\n{random.choice(C_LIST)}**"
-        )
-
-    return
-
-@app.on_callback_query()
-async def callback_handler(client: Client, callback_query):
-    data = callback_query.data
-    chat_id = callback_query.message.chat.id
-    emoji_map = {
-        "zar": "🎲",
-        "dart": "🎯",
-        "basket": "🏀",
-        "futbol": "⚽",
-        "bowling": "🎳",
-        "slot": "🎰"
-    }
-
-    if data in emoji_map:
-        await client.send_dice(chat_id, emoji=emoji_map[data])
-        await callback_query.answer("Tekrar oynadın!")
+            f"**✅ Doğruluk mu ? 🔪 Cesaret mi ? \n\n{m.from_user.mention} Cesaret sorusu seçti !\n\n{random.choice(C_LİST)}**"
         )
 
 
