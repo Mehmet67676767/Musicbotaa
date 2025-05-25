@@ -43,11 +43,11 @@ def help_pannel(_, START: Union[bool, int] = None):
              [
 InlineKeyboardButton(
                     text=_["H_B_4"],
-                    callback_data="help_callback hb1",
+                    callback_data="help_callback hb4",
                 ),
                 InlineKeyboardButton(
                     text=_["H_B_7"],
-                    callback_data="help_callback hb2",  
+                    callback_data="help_callback hb7",  
                  ),
             ],
             mark,
