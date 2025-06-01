@@ -21,10 +21,10 @@ from youtubesearchpython.__future__ import VideosSearch
 # Kendi yapılandırma dosyanızdan import edin
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
-from ArchMusic import app
+from AlexaMusic import app
 # convert_bytes ve song_markup_no_lang artık kullanılmadığı için kaldırıldı.
-# from ArchMusic.utils.formatters import convert_bytes
-# from ArchMusic.utils.inline.song import song_markup_no_lang
+# from AlexaMusic.utils.formatters import convert_bytes
+# from AlexaMusic.utils.inline.song import song_markup_no_lang
 
 # --- LOGLAMA AYARLARI ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
