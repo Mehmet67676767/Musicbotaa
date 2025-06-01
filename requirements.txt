@@ -27,3 +27,17 @@ werkzeug
 yt-dlp~=2025.5.22
 https://github.com/KSKOP69/youtube-search-python/archive/ksk.zip
 pyyaml==6.0.2
+
+
+#arızalı olabilir 
+g4f[all]
+filetype # Replacement of imghdr
+googlesearch-python
+httpx[http2]
+#TheApix
+TheApix
+pyfiglet
+lexica-api
+MukeshAPI
+nekos.py
+uuid
