@@ -22,9 +22,9 @@ from pyrogram.errors.exceptions.bad_request_400 import MessageNotModified
 # Kendi yapılandırma dosyanızdan import edin
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
-from ArchMusic import app
-from ArchMusic.utils.formatters import convert_bytes
-from ArchMusic.utils.inline.song import song_markup_no_lang
+from AlexaMusic import app
+from AlexaMusic.utils.formatters import convert_bytes
+from AlexaMusic.utils.inline.song import song_markup_no_lang
 
 # --- LOGLAMA AYARLARI ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
