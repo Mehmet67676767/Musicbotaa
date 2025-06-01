@@ -86,7 +86,7 @@ start_5 : "🦸 SÜPERGRUP GEREKLİ 🦸\n\nLütfen grubunuzu süpergrup'a dön�
 start_6 : "KARA LİSTEDEKİ SOHBET\n\nBu sohbet, botu kullanmak için kara listede. Sohbetinizi beyaz listeye almak için bir sudo kullanıcısına başvurun, sudo kullanıcıları [liste]({0})."
 start_7: "Heya :) {0}'den beri hayattayım"
 # Help
-help_1 = "**ᴋᴏᴍᴜᴛʟᴀʀ ᴠᴇ ᴋᴜʟʟᴀɴıᴍ ᴋıʟᴀᴠᴜᴢʟᴀʀıɴı ɢᴏ̈ʀᴍᴇᴋ ɪᴄ̧ɪɴ ᴀşᴀɢ̆ıᴅᴀᴋɪ ʙᴜᴛᴏɴʟᴀʀı ᴋᴜʟʟᴀɴıɴıᴢ 🔮**\n\nɢʀᴜᴘ ᴜ̈ʏᴇʟᴇʀɪ ʏᴀʟɴıᴢᴄᴀ ᴏʏɴᴀᴛᴍᴀ ᴋᴏᴍᴜᴛʟᴀʀıɴı ɢᴏ̈ʀᴇʙɪʟɪʀ. ᴀᴍᴀ ɢʀᴜᴘ ʏᴏ̈ɴᴇᴛɪᴄɪʟᴇʀɪ ᴇᴋ ᴏʟᴀʀᴀᴋ ᴀᴅᴍɪɴ ᴋᴏᴍᴜᴛʟᴀʀıɴı ᴅᴀ ɪɴᴄᴇʟᴇʏᴇʙɪʟɪʀ. 🎧"
+help_1 : "**ᴋᴏᴍᴜᴛʟᴀʀ ᴠᴇ ᴏ̈ɢ̆ʀᴇᴛɪᴄɪʟᴇʀɪ ɢᴏ̈ʀᴍᴇᴋ ɪ̇ᴄ̧ɪɴ ᴀşᴀɢ̆ᴀᴅᴀᴋɪ ʙᴜᴛᴏɴʟᴀʀı ᴋᴜʟʟᴀɴıɴıᴢ 🔮**\n\nɢʀᴜᴘ ᴜ̈ʏᴇʟᴇʀɪɴɪɴ sᴀᴅᴇᴄᴇ ᴏʏɴᴀᴛᴍᴀ ᴋᴏᴍᴜᴛʟᴀʀıɴı, ɢʀᴜᴘ ᴀᴅᴍɪɴʟᴇʀɪɴɪɴsᴇ ᴀʏʀıᴄᴀ ᴀᴅᴍɪɴ ᴋᴏᴍᴜᴛʟᴀʀıɴı ɪ̇ɴᴄᴇʟᴇᴍᴇʟᴇʀɪ ʏᴇᴛᴇʀʟɪ ᴏʟᴀᴄᴀᴋᴛıʀ. 🎧"
 help_2 : "**ʏᴀʀᴅıᴍ ɪ̇ᴄ̧ɪ̇ɴ ʙᴜᴛᴏɴᴀ ᴛıᴋʟᴀʏıɴ** 🔮"
 
 # Settings
