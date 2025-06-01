@@ -1,3 +1,4 @@
+gtts
 httpx[http2]
 colorama
 aiofiles
